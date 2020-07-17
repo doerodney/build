@@ -6,7 +6,6 @@ BUILD_IMAGE := $(shell docker build --tag $(TAG) .)
 BUILD_MANIFEST := $(shell docker image inspect $(REPOSITORY) > $(MANIFEST))
 
 define build-manifest
-echo "Creating $@ for repository $(REPOSITORY)..."
 $(BUILD_IMAGE)
 $(BUILD_MANIFEST)
 endef

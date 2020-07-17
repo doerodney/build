@@ -1,8 +1,7 @@
 # Legend:
-# $@ The filename representing the target
+# $@ The target directory.  More typically, a file that is a build target.
 
 # Identify the directories that contain a Dockerfile.
-# source-dirs = alpha beta
 source-dirs := $(sort $(dir $(shell find . -name Dockerfile)))
 
 .PHONY: all $(source-dirs)
